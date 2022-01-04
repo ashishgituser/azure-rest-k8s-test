@@ -44,6 +44,12 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <name>ashishchaudhary008/k8s-${project.artifactId}:${project.version}</name>
+                    </image>
+                    <pullPolicy>IF_NO_PRESENT</pullPolicy>
+                </configuration>
             </plugin>
         </plugins>
     </build>
